@@ -87,14 +87,14 @@ function netIncome(taxIncome)
     return netSum;
 }
 
-//Once the button is clicked thweb will reset to it's original state.
-clearBtn.addEventListener('click', () =>
-{
-    taxIncome.innerText = '';
-    taxIncome.value = '';
-    taxResult.innerText = '';
-    taxResult.value = '';
-});
+// //Once the button is clicked thweb will reset to it's original state.
+// clearBtn.addEventListener('click', () =>
+// {
+//     taxIncome.innerText = '';
+//     taxIncome.value = '';
+//     taxResult.innerText = '';
+//     taxResult.value = '';
+// });
 
 // // //Function to Clear the screen(form and results)=can be a button
 // function clearScreen()
