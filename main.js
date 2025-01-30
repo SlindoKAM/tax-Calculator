@@ -1,22 +1,22 @@
-const taxIncome = document.getElementById('taxIncome');//input tag field
-const clearBtn = document.getElementById('clearButton');//clear tag button
-const calcTax = document.getElementById('calcTax');//calcalate tax tag button
-const taxResult = document.getElementById('taxResult');//output tag field
+// const taxIncome = document.getElementById('taxIncome');//input tag field
+// const clearBtn = document.getElementById('clearButton');//clear tag button
+// const calcTax = document.getElementById('calcTax');//calcalate tax tag button
+// const taxResult = document.getElementById('taxResult');//output tag field
 
 
-//Function that will display an error message.
-function showError(msg)
-{
-    //HTML element for the error message.
-    const errorMsg = document.getElementById('errorMsg');
-    errorMsg.textContent = msg;
+// //Function that will display an error message.
+// function showError(msg)
+// {
+//     //HTML element for the error message.
+//     const errorMsg = document.getElementById('errorMsg');
+//     errorMsg.textContent = msg;
 
-    //Automatically clear the error message after 5 seconds
-    setTimeout( () =>
-    {
-        errorMsg.textContent = ' ';
-    }, 5000);
-}
+//     //Automatically clear the error message after 5 seconds
+//     setTimeout( () =>
+//     {
+//         errorMsg.textContent = ' ';
+//     }, 5000);
+// }
 
 //Function that will calculate tax owed according to their income(inputted by the user)
 function taxCalc(taxIncome)
@@ -61,8 +61,8 @@ function taxCalc(taxIncome)
     }else if(taxIncome > 50000)//4th Bracket
     {
         //3rd bracket results at 0% and 10% and 20%
-        //[10000*(0/100) + 10000*(10/100) + 30000*(20/100)] = 70000
-        let taxBrac = 70000;
+        //[10000*(0/100) + 10000*(10/100) + 30000*(20/100)] = 7000
+        let taxBrac = 7000;
         //Calculating tax owed at 30%
         let taxStart = taxIncome - 50000;
         taxStart = taxStart * (30/100);
@@ -75,7 +75,7 @@ function taxCalc(taxIncome)
     return taxSum;
 }
 
-//Fuction to calculate the Net-Income (taxInocme - taxOwed)
+//Fuction to calculate the Net-Income (taxIncome - taxOwed)
 function netIncome(taxIncome)
 {
     let netSum = 0;
@@ -87,27 +87,28 @@ function netIncome(taxIncome)
     return netSum;
 }
 
-// //Once the button is clicked thweb will reset to it's original state.
-// clearBtn.addEventListener('click', () =>
-// {
-//     taxIncome.innerText = '';
-//     taxIncome.value = '';
-//     taxResult.innerText = '';
-//     taxResult.value = '';
-// });
+/*Still have to work on it
+//Once the button is clicked thweb will reset to it's original state.
+clearBtn.addEventListener('click', () =>
+{
+    taxIncome.innerText = '';
+    taxIncome.value = '';
+    taxResult.innerText = '';
+    taxResult.value = '';
+});
 
-// // // //Function to Clear the screen(form and results)=can be a button
-// function clearScreen()
-// {
-//     //Once the button is clicked thweb will reset to it's original state.
-//     clearBtn.addEventListener('click', () =>
-//     {
-//         taxIncome.innerText = '';
-//         taxIncome.value = '';
-//         taxResult.innerText = '';
-//         taxResult.value = '';
-//     });
-// }
+// // //Function to Clear the screen(form and results)=can be a button
+function clearScreen()
+{
+    //Once the button is clicked thweb will reset to it's original state.
+    clearBtn.addEventListener('click', () =>
+    {
+        taxIncome.innerText = '';
+        taxIncome.value = '';
+        taxResult.innerText = '';
+        taxResult.value = '';
+    });
+}*/
 
 //////Function to Clear the screen(form and results)=can be a button
 function clearScreen()
@@ -125,21 +126,30 @@ function clearScreen()
 }
 
 //Once the button is clicked thweb will reset to it's original state.
-clearBtn.addEventListener('click', clearScreen());
+/*clearBtn.addEventListener('click', clearScreen());*/
 
-////////Function to Clear the screen(form and results)=can be a button
-// function clearScreen()
-// {
-//     //Once the button is clicked thweb will reset to it's original state.
-//     taxIncome.innerText = '';
-//     taxIncome.value = '';
-//     taxResult.innerText = '';
-//     taxResult.value = '';
-// }
-//clearBtn.addEventListener('click', clearScreen);
+/*Still have to work on it
+//////Function to Clear the screen(form and results)=can be a button
+function clearScreen()
+{
+    //Once the button is clicked thweb will reset to it's original state.
+    taxIncome.innerText = '';
+    taxIncome.value = '';
+    taxResult.innerText = '';
+    taxResult.value = '';
+}
+clearBtn.addEventListener('click', clearScreen);*/
 
-// //Function to show the tax braekdown per bracket for the Incomes(Showing into what bracket it fails under)
-// function showBrac()
-// {
+/*Still have to work on it
+//Function to show the tax braekdown per bracket for the Incomes(Showing into what bracket it fails under)
+function showBrac()
+{
 
-// }
+}*/
+
+//Testing the calculate tax functionality
+/*
+const taxIncomeTest = 81000;
+const taxResultTest = taxCalc(taxIncomeTest);
+console.log(`the tax-Income:${taxIncomeTest} and the tax-Owned:${taxResultTest}`);
+console.assert(taxResultTest === 16300, "%o", {taxResultTest: 'some error'});*/
