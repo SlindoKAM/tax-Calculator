@@ -147,9 +147,10 @@ function showBrac()
 
 }*/
 
-//Testing the calculate tax functionality
-/*
+//Testing the calculate tax functionality and net-income
 const taxIncomeTest = 81000;
 const taxResultTest = taxCalc(taxIncomeTest);
-console.log(`the tax-Income:${taxIncomeTest} and the tax-Owned:${taxResultTest}`);
-console.assert(taxResultTest === 16300, "%o", {taxResultTest: 'some error'});*/
+const netIncomeTest = netIncome(taxIncomeTest);
+console.log(`Tax-Income:${taxIncomeTest} \nTax-Owned:${taxResultTest} \nNet-Income:${netIncomeTest}`);
+console.assert(taxResultTest === 16300, '\n');
+console.assert(netIncomeTest === 64700);
