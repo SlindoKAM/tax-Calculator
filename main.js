@@ -96,7 +96,7 @@ function netIncome(taxIncome)
 //     taxResult.value = '';
 // });
 
-// // //Function to Clear the screen(form and results)=can be a button
+// // // //Function to Clear the screen(form and results)=can be a button
 // function clearScreen()
 // {
 //     //Once the button is clicked thweb will reset to it's original state.
@@ -108,6 +108,35 @@ function netIncome(taxIncome)
 //         taxResult.value = '';
 //     });
 // }
+
+//////Function to Clear the screen(form and results)=can be a button
+function clearScreen()
+{
+    //Once the button is clicked thweb will reset to it's original state.
+    const reset = () =>
+    {
+        taxIncome.innerText = '';
+        taxIncome.value = '';
+        taxResult.innerText = '';
+        taxResult.value = '';
+    };
+
+    return reset;
+}
+
+//Once the button is clicked thweb will reset to it's original state.
+clearBtn.addEventListener('click', clearScreen());
+
+////////Function to Clear the screen(form and results)=can be a button
+// function clearScreen()
+// {
+//     //Once the button is clicked thweb will reset to it's original state.
+//     taxIncome.innerText = '';
+//     taxIncome.value = '';
+//     taxResult.innerText = '';
+//     taxResult.value = '';
+// }
+//clearBtn.addEventListener('click', clearScreen);
 
 // //Function to show the tax braekdown per bracket for the Incomes(Showing into what bracket it fails under)
 // function showBrac()
