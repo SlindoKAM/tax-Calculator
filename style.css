@@ -1,0 +1,15 @@
+html{
+    background: #F2F2F2;
+}
+
+.head-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.taxCalc-heading{
+    font-size: 3rem;
+    font-family: Arial;
+    background: red;
+}
