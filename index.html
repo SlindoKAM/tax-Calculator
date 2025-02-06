@@ -22,6 +22,69 @@
             <h1 class="taxCalc-heading">
                 KAM TAX CALCULATOR
             </h1>
+            <h2 class="info-heading">
+                How Much Tax Will I Pay?
+            </h2>
+        </div>
+
+        <div class="content-container">
+            <div class="calc-cta">
+                <h6 class="income-cta">
+                    Annual Income:          
+                </h6>
+                <!-- <p class="rand">
+                    R          
+                </p> -->
+                <input type="text" class="income-input" placeholder="Enter Your Annual Income">
+                <button class="calc-btn">
+                    Calculate Tax
+                </button>
+            </div>
+
+            <div class="result-heading">
+                <h6 class="result-info">
+                    Tax Results
+                </h6>
+
+                <div class="tax-result">
+                    <p class="bracRes">Total Tax:</p>
+                    <p class="bracRes" id="taxResult">R00</p>
+                </div>
+
+                <div class="net-result">
+                    <p class="bracRes">Net-Income:</p>
+                    <p class="bracRes" id="netResult">R00</p>
+                </div>
+            </div>
+                
+            <div class="tax-breakdown">
+                <h6 class="result-info">
+                    Tax Breakdown
+                </h6>
+
+                <table class="tax-grid">
+                    <tr>
+                        <th>Income Range:</th>
+                        <th>Tax Rate:</th>
+                    </tr>
+                    <tr>
+                        <td>R0 - R10000</td>
+                        <td>0%</td>
+                    </tr>
+                    <tr>
+                        <td>R10001 - R20000</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>R20001 - R50000</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <td>Above R50000</td>
+                        <td>30%</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </body>
 </html>

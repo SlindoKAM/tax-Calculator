@@ -1,15 +1,111 @@
-html{
+body{
     background: #F2F2F2;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .head-container{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .taxCalc-heading{
     font-size: 3rem;
-    font-family: Arial;
+    border-bottom: 0.125rem solid #000000;
+    color: #00274D;
+    border-style: outset;
+    border-radius: 3rem;
+    border-color: #D9D9D9;
+    padding: 1rem;
+}
+
+.info-heading{
+    color: #00274D;
+    border-bottom: 0.125rem solid #000000;
+    width: 25%;
+}
+
+.content-container{
     background: red;
+    margin: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.calc-cta{
+    background: green;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.income-cta{
+    font-size: 2rem;
+    margin: 0 0 0.25rem 0;
+}
+
+.income-input{
+    width: 70rem;
+    height: 3rem;
+    border-radius: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.calc-btn{
+    width: 6rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background: #00274D;
+    color: #FFFFFF;
+}
+
+.result-heading{
+    padding: 0 1rem;
+    background: blue;
+    margin: 1rem;
+}
+
+.result-info{
+    font-size: 2rem;
+    margin: 0 0 0.25rem 0;
+}
+
+.tax-result{
+    display: flex;
+    justify-content: space-between;
+    color: #000000;
+}
+
+.net-result{
+    display: flex;
+    justify-content: space-between;
+    color: #000000;
+}
+
+.bracRes{
+    margin: 0.25rem;
+}
+
+.tax-breakdown{
+    background: black;
+    margin: 1rem;
+    color: #FFFFFF;
+    padding: 0 1rem;
+}
+
+
+
+.tax-grid{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+th, td{
+    border: 0.065rem solid #ffffff;
+    text-align: left;
+    padding: 0.5rem;
 }

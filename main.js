@@ -2,6 +2,7 @@
 // const clearBtn = document.getElementById('clearButton');//clear tag button
 // const calcTax = document.getElementById('calcTax');//calcalate tax tag button
 // const taxResult = document.getElementById('taxResult');//output tag field
+// const netResult = document.getElementById('netResult');//output tag field
 
 
 // //Function that will display an error message.
