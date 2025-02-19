@@ -35,8 +35,8 @@
                 <!-- <p class="rand">
                     R          
                 </p> -->
-                <input type="text" class="income-input" placeholder="Enter Your Annual Income">
-                <button class="calc-btn">
+                <input id="taxIncome" type="text" class="income-input" placeholder="Enter Your Annual Income">
+                <button class="calc-btn" id="calcTax">
                     Calculate Tax
                 </button>
             </div>
@@ -47,13 +47,13 @@
                 </h6>
 
                 <div class="tax-result">
-                    <p class="bracRes">Total Tax:</p>
-                    <p class="bracRes" id="taxResult">R00</p>
+                    <p class="brac-res">Total Tax:</p>
+                    <p class="brac-res" id="taxResult"></p>
                 </div>
 
                 <div class="net-result">
-                    <p class="bracRes">Net-Income:</p>
-                    <p class="bracRes" id="netResult">R00</p>
+                    <p class="brac-res">Net-Income:</p>
+                    <p class="brac-res" id="netResult"></p>
                 </div>
             </div>
                 
@@ -71,25 +71,27 @@
                     <tr>
                         <td>R0 - R10000</td>
                         <td>0%</td>
-                        <td>R00</td>
+                        <td id="bracResZ"></td>
                     </tr>
                     <tr>
                         <td>R10001 - R20000</td>
                         <td>10%</td>
-                        <td>R100</td>
+                        <td id="bracResO"></td>
                     </tr>
                     <tr>
                         <td>R20001 - R50000</td>
                         <td>20%</td>
-                        <td>R200</td>
+                        <td id="bracResT"></td>
                     </tr>
                     <tr>
                         <td>Above R50000</td>
                         <td>30%</td>
-                        <td>R300</td>
+                        <td id="bracResA"></td>
                     </tr>
                 </table>
             </div>
         </div>
+        <!-- Add the Java Script to HTML for the functionality -->
+        <script src="main.js"></script>
     </body>
 </html>
