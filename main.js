@@ -177,7 +177,7 @@ calcTax.addEventListener('click', () =>
         bracResA.textContent = `R ${taxCalc(taxIncome.value).toFixed(2)} `;
     }
     //show the tax breakdown per bracket
-    
+    taxBreakDown.style.display = 'block';
 });
 
 //Still have to work on it
