@@ -7,6 +7,8 @@ const bracResZ = document.getElementById('bracResZ');//output tag field for the 
 const bracResO = document.getElementById('bracResO');//output tag field for the 2nd bracket(10%)
 const bracResT = document.getElementById('bracResT');//output tag field for the 3rd bracket(20%)
 const bracResA = document.getElementById('bracResA');//output tag field for the 4th bracket(30%)
+const taxBreakDown = document.getElementById('taxBreakDown');//output tag field for the tax breakdown per bracket
+//const errorMsg = document.getElementById('errorMsg');//output tag field for the error message
 
 // //Function that will display an error message.
 function showError(msg)
@@ -174,6 +176,8 @@ calcTax.addEventListener('click', () =>
         bracResT.textContent = `R 7000.00`;
         bracResA.textContent = `R ${taxCalc(taxIncome.value).toFixed(2)} `;
     }
+    //show the tax breakdown per bracket
+    
 });
 
 //Still have to work on it
