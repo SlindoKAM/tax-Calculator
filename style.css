@@ -30,7 +30,9 @@ body{
 }
 
 .content-container{
-    background: red;
+    /* background: red; */
+    border: 0.125rem solid #00274D;
+    border-radius: 2rem;
     margin: 1rem 2rem;
     display: flex;
     flex-direction: column;
@@ -68,8 +70,11 @@ body{
 
 .result-heading{
     padding: 0 1rem;
-    background: blue;
+    /* background: blue; */
     margin: 1rem;
+    display: none;
+    border-top: 0.125rem solid #00274D;
+    border-radius: 0.125rem;
 }
 
 .result-info{
@@ -94,11 +99,13 @@ body{
 }
 
 .tax-breakdown{
-    background: black;
+    /* background: black; */
     margin: 1rem;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
     padding: 0 1rem;
     display: none;
+    border-top: 0.125rem solid #00274D;
+    border-radius: 0.125rem;
 }
 
 
@@ -110,7 +117,8 @@ body{
 }
 
 th, td{
-    border: 0.065rem solid #ffffff;
+    /* border: 0.065rem solid #ffffff; */
+    border: 0.065rem solid #000000;
     text-align: left;
     padding: 0.5rem;
 }

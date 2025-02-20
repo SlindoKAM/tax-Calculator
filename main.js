@@ -8,6 +8,7 @@ const bracResO = document.getElementById('bracResO');//output tag field for the 
 const bracResT = document.getElementById('bracResT');//output tag field for the 3rd bracket(20%)
 const bracResA = document.getElementById('bracResA');//output tag field for the 4th bracket(30%)
 const taxBreakDown = document.getElementById('taxBreakDown');//output tag field for the tax breakdown per bracket
+const resultsBox = document.getElementById('resultsBox');//output tag field for the results
 //const errorMsg = document.getElementById('errorMsg');//output tag field for the error message
 
 // //Function that will display an error message.
@@ -145,6 +146,7 @@ function clearScreen()
 //Event listener for the calculate tax button
 calcTax.addEventListener('click', () =>
 {
+    let taxTemp = taxCalc(taxIncome.value);
     console.log('Button clicked');
     //Display the tax owed
     taxResult.textContent = `R ${taxCalc(taxIncome.value).toFixed(2)}`;
@@ -152,32 +154,42 @@ calcTax.addEventListener('click', () =>
     //Display the net income
     netResult.textContent = `R ${netIncome(taxIncome.value).toFixed(2)}`;
 
+    //show the tax breakdown per bracket
+    taxBreakDown.style.display = 'block';
+    resultsBox.style.display = 'block';
+
     //This evaluation still needs work!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
     if(taxIncome.value >= 0 && taxIncome.value <= 10000)
     {
-        console.log('1st Bracket');
-        bracResZ.textContent = `R ${taxCalc(taxIncome.value).toFixed(2)}`;
+        // console.log('1st Bracket');
+        bracResZ.textContent = `R ${taxTemp.toFixed(2)}`;
+        bracResO.textContent = `R 0.00`;
+        bracResT.textContent = `R 0.00`;
+        bracResA.textContent = `R 0.00`;
     }else if(taxIncome.value > 10000 && taxIncome.value <= 20000)
     {
-        console.log('2nd Bracket');
+        // console.log('2nd Bracket');
         bracResZ.textContent = `R 0.00`;
-        bracResO.textContent = `R ${taxCalc(taxIncome.value).toFixed(2)}`;
+        bracResO.textContent = `R ${taxTemp.toFixed(2)}`;
+        bracResT.textContent = `R 0.00`;
+        bracResA.textContent = `R 0.00`;
     }else if(taxIncome.value > 20000 && taxIncome.value <= 50000)
     {
-        console.log('3rd Bracket');
+        // console.log('3rd Bracket');
         bracResZ.textContent = `R 0.00`;
         bracResO.textContent = `R 1000.00`;
-        bracResT.textContent = `R ${taxCalc(taxIncome.value).toFixed(2)}`;
+        taxTemp = taxTemp - 1000.00;
+        bracResT.textContent = `R ${taxTemp.toFixed(2)}`;
+        bracResA.textContent = `R 0.00`;
     }else if(taxIncome.value > 50000)
     {
-        console.log('4th Bracket');
+        // console.log('4th Bracket');
         bracResZ.textContent = `R 0.00`;
         bracResO.textContent = `R 1000.00`;
-        bracResT.textContent = `R 7000.00`;
-        bracResA.textContent = `R ${taxCalc(taxIncome.value).toFixed(2)} `;
+        bracResT.textContent = `R 6000.00`;
+        taxTemp = taxTemp - 7000.00;
+        bracResA.textContent = `R ${taxTemp.toFixed(2)}`;
     }
-    //show the tax breakdown per bracket
-    taxBreakDown.style.display = 'block';
 });
 
 //Still have to work on it
